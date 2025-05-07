@@ -9,7 +9,7 @@ spring:
   datasource:
     url: ${URL}
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: ${NAME}
+    username: kernel360_5
     password: ${PASSWORD}
     application:
     name: jpa
