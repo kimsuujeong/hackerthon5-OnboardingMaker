@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import axios from "axios"; 
+
 import {
   Container,
   Paper,
@@ -26,10 +28,20 @@ function LoginForm() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form Data:", form);
+    try {
+      const response = await axios.post("http://localhost:8080/user/login", {
+        email: form.email,
+        password: form.password,
+      });
+  
+      console.log("로그인 성공:", response.data);
+    } catch (error) {
+      console.error("로그인 실패:", error.response?.data || error.message);
+    }
   };
+  
 
   return (
     <Container
