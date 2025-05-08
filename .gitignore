@@ -105,4 +105,5 @@ dist-ssr
 *.sln
 *.sw?
 
-.vite
+.vite/
+
