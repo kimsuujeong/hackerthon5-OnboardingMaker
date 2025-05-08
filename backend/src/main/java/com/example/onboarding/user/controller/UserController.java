@@ -2,6 +2,7 @@ package com.example.onboarding.user.controller;
 
 import com.example.onboarding.user.dto.*;
 import com.example.onboarding.user.service.UserService;
+import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,7 +20,7 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public UserResponseDto login(@RequestBody LoginRequestDto dto) {
-        return userService.login(dto);
+    public UserResponseDto login(@RequestBody LoginRequestDto dto, HttpServletRequest request) {
+        return userService.login(dto, request);
     }
 }
