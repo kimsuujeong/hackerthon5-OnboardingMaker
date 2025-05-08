@@ -21,7 +21,7 @@ public class MissionService {
                 .collect(Collectors.toList());
     }
 
-    public MissionResponseDto getMissionById(Long id) {
+    public MissionResponseDto getMissionById(int id) {
         Mission mission = missionRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 미션이 없습니다."));
         return MissionResponseDto.fromEntity(mission);
