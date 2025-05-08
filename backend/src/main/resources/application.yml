@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: jpa
   jpa:
     show-sql: true
     properties:
@@ -11,8 +13,6 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: kernel360_5
     password: ${PASSWORD}
-    application:
-    name: jpa
   output:
     ansi:
       enabled: always
