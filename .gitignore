@@ -67,4 +67,45 @@ out/
 
 ### 개인 설정 파일
 gradle.properties
+<<<<<<< HEAD
 >>>>>>> 2e7e9ab (Feat: "초기 프로젝트 상태")
+=======
+application.yml
+
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+>>>>>>> upstream/main
