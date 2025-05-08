@@ -26,7 +26,7 @@ public class SecurityConfig {
                         .securityContextRepository(new HttpSessionSecurityContextRepository())
                 )
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/user/register", "/user/login", "/mission/**", "/reply/**").permitAll()
+                        .requestMatchers("/user/register", "/user/login", "/mission/**", "/reply/**", "/missionWrite").permitAll()
                         .anyRequest().authenticated()
                 );
 
