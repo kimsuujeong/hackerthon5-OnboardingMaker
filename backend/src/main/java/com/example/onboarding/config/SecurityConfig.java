@@ -16,25 +16,22 @@ import org.springframework.security.web.context.HttpSessionSecurityContextReposi
 @RequiredArgsConstructor
 public class SecurityConfig {
 
-    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf(csrf -> csrf.disable())
-                .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
-                .securityContext(securityContext -> securityContext
-                        .securityContextRepository(new HttpSessionSecurityContextRepository())
-                )
-                .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/user/register", "/user/login", "/mission/**", "/reply/**", "/missionWrite").permitAll()
-                        .anyRequest().authenticated()
-                );
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+		http.csrf(csrf -> csrf.disable())
+				.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
+				.securityContext(securityContext -> securityContext
+						.securityContextRepository(new HttpSessionSecurityContextRepository()))
+				.authorizeHttpRequests(auth -> auth
+						.requestMatchers("/user/register", "/user/login", "/mission/**", "/reply/**", "/missionWrite",
+								"/swagger-ui/**", "/v3/api-docs/**", "/swagger-resources/**", "/webjars/**")
+						.permitAll().anyRequest().authenticated());
 
-        return http.build();
-    }
+		return http.build();
+	}
 
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
+	@Bean
+	public PasswordEncoder passwordEncoder() {
+		return new BCryptPasswordEncoder();
+	}
 }
