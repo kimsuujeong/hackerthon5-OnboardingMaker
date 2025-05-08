@@ -3,6 +3,7 @@ package com.example.onboarding.mission.controller;
 import com.example.onboarding.mission.dto.MissionResponseDto;
 import com.example.onboarding.mission.service.MissionService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,7 +23,8 @@ public class MissionController {
 
     // 개별 미션 상세 조회
     @GetMapping("/{id}")
-    public MissionResponseDto getMissionDetail(@PathVariable Long id) {
+    public MissionResponseDto getMissionDetail(@PathVariable int id) {
+
         return missionService.getMissionById(id);
     }
 }
