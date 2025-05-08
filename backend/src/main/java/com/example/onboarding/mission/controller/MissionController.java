@@ -1,5 +1,6 @@
 package com.example.onboarding.mission.controller;
 
+import com.example.onboarding.mission.dto.MissionListDto;
 import com.example.onboarding.mission.dto.MissionResponseDto;
 import com.example.onboarding.mission.service.MissionService;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ public class MissionController {
 
     // 전체 미션 목록 조회
     @GetMapping("")
-    public List<MissionResponseDto> getMissionName() {
+    public List<MissionListDto> getMissionName() {
         return missionService.getAllMissions();
     }
 

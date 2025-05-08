@@ -1,11 +1,13 @@
 package com.example.onboarding.mission.service;
 
+import com.example.onboarding.mission.dto.MissionListDto;
 import com.example.onboarding.mission.dto.MissionResponseDto;
 import com.example.onboarding.mission.entity.Mission;
 import com.example.onboarding.mission.repository.MissionRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -15,10 +17,8 @@ public class MissionService {
 
     private final MissionRepository missionRepository;
 
-    public List<MissionResponseDto> getAllMissions() {
-        return missionRepository.findAllByOrderByDeadlineAsc().stream()
-                .map(MissionResponseDto::fromEntity)
-                .toList();
+    public List<MissionListDto> getAllMissions() {
+        return missionRepository.findTitleAndDeadline();
     }
 
     public MissionResponseDto getMissionById(Integer id) {
