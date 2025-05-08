@@ -16,5 +16,3 @@ spring:
   output:
     ansi:
       enabled: always
-jwt:
-  secret: 나만의_비밀키1234567890
