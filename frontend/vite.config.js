@@ -6,7 +6,7 @@ import path from "path";
 export default defineConfig({
   resolve: {
     alias: {
-      "@": path.resolve(new URL(".", import.meta.url).pathname, "./src"), // '@'를 src 디렉토리로 설정
+      "@": path.resolve(process.cwd(), "src"), // 또는 ESM에서 __dirname 구해서
     },
   },
   plugins: [react()],
