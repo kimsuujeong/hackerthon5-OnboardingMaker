@@ -12,7 +12,7 @@ import java.time.LocalDateTime;
 @Builder
 public class MissionResponseDto {
 
-    private Long missionId;
+    private int missionId;
     private String title;
     private String description;
     private LocalDateTime deadline;
