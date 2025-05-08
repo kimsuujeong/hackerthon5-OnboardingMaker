@@ -29,7 +29,7 @@ public class UserService {
                 .nickname(dto.getNickname())
                 .email(dto.getEmail())
                 .password(passwordEncoder.encode(dto.getPassword()))
-                .isAdmin(false)
+                .isAdmin(dto.isAdmin())
                 .build();
         userRepository.save(user);
     }
