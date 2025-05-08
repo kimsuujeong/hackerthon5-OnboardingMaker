@@ -16,12 +16,12 @@ public class MissionService {
     private final MissionRepository missionRepository;
 
     public List<MissionResponseDto> getAllMissions() {
-        return missionRepository.findAll().stream()
+        return missionRepository.findAllByOrderByDeadlineAsc().stream()
                 .map(MissionResponseDto::fromEntity)
-                .collect(Collectors.toList());
+                .toList();
     }
 
-    public MissionResponseDto getMissionById(int id) {
+    public MissionResponseDto getMissionById(Integer id) {
         Mission mission = missionRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("해당 미션이 없습니다."));
         return MissionResponseDto.fromEntity(mission);
