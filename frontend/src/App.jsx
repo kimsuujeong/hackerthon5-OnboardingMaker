@@ -1,16 +1,17 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
+import Login from "./pages/LoginPage"
 
 function App() {
-  const [count, setCount] = useState(0);
 
   return (
     <>
+<<<<<<< HEAD
       <div>
         하이
       </div>
+=======
+      <Login/>
+>>>>>>> d88eb31d96d2fae7c7e37dedb08aa9ff02392dc9
     </>
   );
 }
