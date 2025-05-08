@@ -29,14 +29,14 @@ public class MissionWriteService {
 		
 		mission.setTitle(dto.getTitle());
 		mission.setDescription(dto.getDescription());
-		mission.setTotalGroups((int) dto.getTotal_groups());
-		mission.setCreatedAt(LocalDateTime.parse(dto.getCreated_at()));
+		mission.setTotalGroups((int) dto.getTotalGroups());
+		mission.setCreatedAt(LocalDateTime.parse(dto.getCreatedAt())); // TODO 현재 시간 받게 만들기
 		mission.setDeadline(LocalDateTime.parse(dto.getDeadline()));
 		
 		Mission saved = missionRepository.save(mission);
 
 		// total_groups 만큼 Group 생성
-		int total = dto.getTotal_groups();  
+		int total = dto.getTotalGroups();  
 		
 	    for (int i = 1; i <= total; i++) {
 	        GroupEntity g = new GroupEntity();
