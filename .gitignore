@@ -1,7 +1,16 @@
-# ============================
-# 📦 Java (Spring Boot)
-# ============================
+# Compiled class file
 *.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
 *.jar
 *.war
 *.nar
@@ -9,93 +18,89 @@
 *.zip
 *.tar.gz
 *.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+=======
+HELP.md
+.gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-# ============================
-# 🧪 Logs
-# ============================
-*.log
-logs/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
-
-# ============================
-# ⚙️ Gradle
-# ============================
-.gradle
-gradle.properties
-
-# ============================
-# 🧩 Spring / Application config
-# ============================
-application.yml
-.env
-
-# ============================
-# 🧱 IDEs
-# ============================
-
-## IntelliJ IDEA
-.idea/
-*.iml
-*.ipr
-*.iws
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
-
-## Eclipse / STS
+### STS ###
 .apt_generated
 .classpath
 .factorypath
 .project
-.settings/
+.settings
 .springBeans
 .sts4-cache
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-## NetBeans
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+out/
+!**/src/main/**/out/
+!**/src/test/**/out/
+
+### NetBeans ###
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-## VSCode
+### VS Code ###
 .vscode/
-!.vscode/extensions.json
 
-# ============================
-# 🧶 Node.js / Frontend
-# ============================
+### env 파일
+.env
+
+### 개인 설정 파일
+gradle.properties
+application.yml
+
+# Node.js dependencies
 node_modules/
+
+# Build output
 dist/
-dist-ssr/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
 *.local
 
-# ============================
-# 🗂️ 기타
-# ============================
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
-
-# ============================
-# 📝 문서 파일
-# ============================
-HELP.md
-
-.vite/
