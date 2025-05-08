@@ -1,11 +1,10 @@
 import "./App.css";
-import Login from "./pages/LoginPage"
+import LoginForm from "@/pages/LoginPage.jsx";
 
 function App() {
-
   return (
     <>
-      <Login/>
+      <LoginForm />
     </>
   );
 }
