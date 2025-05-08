@@ -27,28 +27,28 @@ public class GroupEntity {
     @Column(name = "group_num", nullable = false)
     private int groupNum;
 
-	public int getGroup_id() {
+	public int getGroupId() {
 		return groupId;
 	}
 
-	public void setGroup_id(int group_id) {
-		this.groupId = group_id;
+	public void setGroupId(int groupId) {
+		this.groupId = groupId;
 	}
 
-	public Mission getMission_id() {
+	public Mission getMissionId() {
 		return missionId;
 	}
 
-	public void setMission_id(Mission mission_id) {
-		this.missionId = mission_id;
+	public void setMissionId(Mission missionId) {
+		this.missionId = missionId;
 	}
 
-	public int getGroup_num() {
+	public int getGroupNum() {
 		return groupNum;
 	}
 
-	public void setGroup_num(int group_num) {
-		this.groupNum = group_num;
-	}
+	public void setGroupNum(int groupNum) {
+		this.groupNum = groupNum;
+	}	
     
 }

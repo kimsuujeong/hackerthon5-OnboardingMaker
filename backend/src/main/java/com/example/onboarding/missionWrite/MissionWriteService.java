@@ -40,8 +40,8 @@ public class MissionWriteService {
 		
 	    for (int i = 1; i <= total; i++) {
 	        GroupEntity g = new GroupEntity();
-	        g.setMission_id(saved);
-	        g.setGroup_num(i);
+	        g.setMissionId(saved);
+	        g.setGroupId(i);
 	        groupRepository.save(g);
 	        
 	    }
