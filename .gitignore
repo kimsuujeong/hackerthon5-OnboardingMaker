@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Compiled class file
 *.class
 
@@ -67,12 +66,6 @@ out/
 
 ### 개인 설정 파일
 gradle.properties
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 2e7e9ab (Feat: "초기 프로젝트 상태")
-=======
->>>>>>> origin/main
 application.yml
 
 # Node.js dependencies
@@ -111,7 +104,3 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
-<<<<<<< HEAD
-=======
->>>>>>> upstream/main
->>>>>>> origin/main
