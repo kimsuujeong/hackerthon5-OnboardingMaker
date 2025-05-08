@@ -15,7 +15,8 @@ public class Mission {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int missionId;
+    @Column(name = "mission_id")
+    private Integer missionId;
 
     @Column(nullable = false, length = 100)
     private String title;
@@ -26,9 +27,9 @@ public class Mission {
     @Column(nullable = false)
     private LocalDateTime deadline;
 
-    @Column(nullable = false)
+    @Column(name = "total_groups", nullable = false)
     private int totalGroups;
 
-    @Column(nullable = false)
+    @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
 }
