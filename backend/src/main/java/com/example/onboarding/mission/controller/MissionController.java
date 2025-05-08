@@ -16,15 +16,14 @@ public class MissionController {
     private final MissionService missionService;
 
     // 전체 미션 목록 조회
-    @GetMapping
-    public List<MissionResponseDto> getMissionList() {
+    @GetMapping("")
+    public List<MissionResponseDto> getMissionName() {
         return missionService.getAllMissions();
     }
 
     // 개별 미션 상세 조회
     @GetMapping("/{id}")
-    public MissionResponseDto getMissionDetail(@PathVariable int id) {
-
+    public MissionResponseDto getMissionDetail(@PathVariable Integer id) {
         return missionService.getMissionById(id);
     }
 }
