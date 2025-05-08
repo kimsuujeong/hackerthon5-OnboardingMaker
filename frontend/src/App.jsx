@@ -1,18 +1,3 @@
-// import "./App.css";
-// import Register from "@/pages/Register";
-// import LoginPage from "@/pages/LoginPage";
-//
-// function App() {
-//   return (
-//     <>
-//       {/* <Register /> */}
-//       <LoginPage />
-//     </>
-//   );
-// }
-//
-// export default App;
-// src/App.jsx
 import React, { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { ThemeProvider, CssBaseline } from "@mui/material";
@@ -52,4 +37,3 @@ function App() {
   );
 }
 
-export default App;
