@@ -17,7 +17,7 @@ public class MissionController {
     private final MissionService missionService;
 
     // 전체 미션 목록 조회
-    @GetMapping("")
+    @GetMapping("/list")
     public List<MissionListDto> getMissionName() {
         return missionService.getAllMissions();
     }
